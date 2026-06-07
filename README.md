@@ -69,6 +69,17 @@ The final recipients are saved in:
 output/final_recipients.csv
 ```
 
+## Integration Status
+
+- Ocean.io API is attempted first for lookalike company search.
+- Since Ocean.io returned no companies in the current account, Prospeo Search Company API is used as an alternative.
+- Prospeo Search Person API is used to find real decision-makers with job titles and LinkedIn details.
+- As per the updated FAQ, EazyReach is not required. Prospeo is used as the main replacement for EazyReach, and Hunter.io is used as an additional email resolving API when email data is unavailable.
+- Brevo API is configured for outreach email sending.
+- A safety checkpoint is included before emails are sent.
+- `DRY_RUN=true` previews emails safely, and `DRY_RUN=false` enables real sending.
+
+
 ## Author
 
 Ritika Verma
